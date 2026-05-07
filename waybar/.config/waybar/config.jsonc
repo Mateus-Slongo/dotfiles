@@ -1,0 +1,69 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 40,
+    "margin-top": 0,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": ["niri/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "custom/power"],
+
+    "niri/workspaces": {
+        "format": "{name}",
+        "active-only": false,
+        "all-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "󰤨",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "{essid}"
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛 {usage}%"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "󰾆 {percentage}%"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout", // Or your preferred power menu
+        "tooltip": false
+    }
+}

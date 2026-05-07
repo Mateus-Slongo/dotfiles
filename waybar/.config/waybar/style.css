@@ -1,0 +1,64 @@
+/* Reset & Main Container */
+* {
+    border: none;
+    font-family: "Roboto", "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: transparent; /* Makes the bar background invisible */
+}
+
+/* Island Styling */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: #000000;
+    color: #e0e0e0;
+    padding: 2px 5px;
+    border-radius: 16px 16px 16px 16px; /* Dynamic Island rounded bottoms */
+    margin-top: 5px;
+}
+
+/* Individual Module Spacing */
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#custom-power {
+    padding: 0 8px;
+    margin: 4px 0;
+}
+
+/* Workspaces (Niri) */
+#workspaces button {
+    color: #555555;
+    padding: 0 5px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    color: #e0e0e0;
+    border-bottom: 2px solid #e0e0e0; /* Highlight current workspace */
+}
+
+#workspaces button:hover {
+    color: #bbbbbb;
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Clock specifically centered look */
+#clock {
+    font-weight: 600;
+}
+
+#custom-power {
+    padding-right: 10px;
+}
+

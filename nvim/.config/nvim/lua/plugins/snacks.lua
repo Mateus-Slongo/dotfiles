@@ -1,0 +1,30 @@
+return {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    opts = {
+        bigfile = { enabled = true },
+        dashboard = { enabled = true },
+        explorer = { enabled = true },
+        indent = { enabled = true },
+        input = {
+            enabled = true,
+            win = { style = "input" },
+            prompt_pos = "title",
+            expand = true,
+        },
+        notifier = { enabled = true },
+        picker = { enabled = true },
+        scope = { enabled = true },
+        terminal = { enabled = true },
+        words = { enabled = true },
+    },
+    keys = {
+        { "<leader><space>", function() Snacks.picker.smart() end,    desc = "Smart Find Files" },
+        { "<leader>e",       function() Snacks.explorer() end,        desc = "File Explorer" },
+        { "<leader>ff",      function() Snacks.picker.files() end,    desc = "Find Files" },
+        { "<leader>fg",      function() Snacks.picker.grep() end,     desc = "Grep (Live)" },
+        { "<leader>fb",      function() Snacks.picker.buffers() end,  desc = "Buffers" },
+        { "<leader>t",       function() Snacks.terminal.toggle() end, desc = "Terminal" },
+    },
+}
