@@ -50,13 +50,13 @@ inputbar {
 }
 
 prompt {
-    font: "Roboto 12";
+    font: "Inter 12";
     text-color: @fg-alt;
     vertical-align: 0.5;
 }
 
 entry {
-    font: "Roboto 14";
+    font: "Inter 14";
     placeholder: "Search applications...";
     placeholder-color: @fg-alt;
     vertical-align: 0.5;
@@ -92,7 +92,7 @@ element-icon {
 }
 
 element-text {
-    font: "Roboto 12";
+    font: "Inter 12";
     text-color: inherit;
     vertical-align: 0.5;
 }
