@@ -27,9 +27,9 @@
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-muted": "󰝟",
+        "format-muted": "󰝟 ",
         "format-icons": {
-            "default": ["󰕿", "󰖀", "󰕾"]
+            "default": ["󰕿 ", "󰖀 ", "󰕾 "]
         },
         "on-click": "pavucontrol"
     },
@@ -43,12 +43,12 @@
 
     "cpu": {
         "interval": 10,
-        "format": "󰍛 {usage}%"
+        "format": "󰍛  {usage}%"
     },
 
     "memory": {
         "interval": 30,
-        "format": "󰾆 {percentage}%"
+        "format": "󰾆  {percentage}%"
     },
 
     "battery": {
@@ -57,8 +57,8 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "󱐋 {capacity}%",
-        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+        "format-charging": "󱐋  {capacity}%",
+        "format-icons": ["󰁺 ", "󰁼 ", "󰁾 ", "󰂀 ", "󰁹 "]
     },
 
     "custom/power": {
